@@ -1,0 +1,164 @@
+.inicio-container {
+    background-color: #fff;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    color: #0078d4; 
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: #606060;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.cta-button {
+    padding: 15px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.donate-button {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.info-button {
+    background-color: rgb(3, 125, 207); 
+    color: white;
+    border: 2px solid #0078d4;
+}
+
+.info-button:hover {
+    background-color: rgb(11, 114, 184);
+}
+
+.donate-button:hover {
+    background-color: #369a39; 
+}
+
+.image-container {
+    flex: 1;
+    text-align: right;
+    max-width: 450px; 
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon-section {
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 2px solid #0078d4;
+}
+
+.icon-section h2 {
+    font-size: 2.5rem;
+    color: #0078d4;
+    margin-bottom: 20px;
+}
+
+.commitment-description p {
+    font-size: 1.2rem;
+    color: #606060;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.icon-item {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-item:hover {
+    transform: translateY(-10px);
+}
+
+.icon-item span {
+    font-size: 4rem; 
+    margin-bottom: 15px;
+}
+
+.icon-item h3 {
+    font-size: 1.5rem;
+    color: #0078d4;
+    margin-bottom: 10px;
+}
+
+.icon-item p {
+    font-size: 1rem;
+    color: #606060;
+}
+
+.custom-link {
+    text-decoration: none; /* Remove a linha de baixo (sublinhado) */
+    color: inherit; /* Herda a cor do botão */
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .image-container {
+        margin-top: 20px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .icon-item {
+        flex: 1 1 100%;
+    }
+}

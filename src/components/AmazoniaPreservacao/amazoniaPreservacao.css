@@ -1,0 +1,97 @@
+.preservacao-container {
+    padding: 50px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #0078d4;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 5%;
+}
+
+.icons-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.icon-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.icon-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon2 {
+    font-size: 3em;
+    color: #00796b;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+p {
+    font-size: 1em;
+    color: #555;
+    padding: 0 10px;
+}
+
+.progress-section {
+    margin-bottom: 50px;
+}
+
+.progress-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #00796b;
+}
+
+.progress-bar {
+    background: #d9f4f2;
+    border-radius: 25px;
+    height: 30px;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    display: block;
+    height: 100%;
+    background-color: #00796b;
+    border-radius: 25px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    transition: width 0.5s ease;
+}
+
+.footer-image {
+    margin-top: 40px;
+}
+
+.footer-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
