@@ -13,7 +13,7 @@ export default function Login() {
                 <p>Por favor, entre com seus dados</p>
                 <form >
                     <div className="input-group">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email">Email {email}</label>
                         <input
                             type="email"
                             id="email"
