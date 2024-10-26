@@ -3,16 +3,23 @@ import './contribuir.css';
 import Header from "../../components/Header";
 import Footer from '../../components/Footer'
 import { toast } from 'react-toastify';
-
+ 
 export default function Contribuir() {
     const [amount, setAmount] = useState('');
-    const [paymentMethod, setPaymentMethod] = useState('');
-
+    const [pixCode, setPixCode] = useState('');
+ 
+    // Função para gerar um código PIX único
+    const generatePixCode = () => {
+        return `PIX-${Math.random().toString(36).substr(2, 9)}-${Date.now()}`;
+    }
+ 
     const handleSubmit = (e) => {
         e.preventDefault();
-        toast.success(`Você contribuiu com R$ ${amount} via ${paymentMethod}. Obrigado pela sua contribuição!`);
+        const newPixCode = generatePixCode(); // Gerar o código PIX
+        setPixCode(newPixCode);
+        toast.success(`Você contribuiu com R$ ${amount} via PIX. Código PIX: ${newPixCode}. Obrigado pela sua contribuição!`);
     }
-
+ 
     return (
         <div>
             <Header />
@@ -34,25 +41,22 @@ export default function Contribuir() {
                             required
                         />
                     </div>
-
+ 
+                    {/* Removido o campo de seleção de método de pagamento */}
                     <div className="input-group">
-                        <label htmlFor="paymentMethod">Escolha o método de pagamento:</label>
-                        <select
-                            id="paymentMethod"
-                            value={paymentMethod}
-                            onChange={(e) => setPaymentMethod(e.target.value)}
-                            required
-                        >
-                            <option value="">Selecione</option>
-                            <option value="Pix">Pix</option>
-                            <option value="Cartão de Crédito">Cartão de Crédito</option>
-                            <option value="Cartão de Débito">Cartão de Débito</option>
-                            <option value="Boleto Bancário">Boleto Bancário</option>
-                        </select>
+                        <label>Pagamento via PIX</label>
+                        <p>O pagamento será realizado através de um código PIX gerado automaticamente.</p>
                     </div>
-
+ 
                     <button type="submit" className="cta-button2">Contribuir Agora</button>
                 </form>
+ 
+                {pixCode && (
+                    <div className="pix-code">
+                        <h2>Código PIX gerado:</h2>
+                        <p>{pixCode}</p>
+                    </div>
+                )}
             </div>
             {/* <Footer /> */}
         </div>
